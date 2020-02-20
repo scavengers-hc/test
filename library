@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+long int nbooks,nlib,days;
+vector<long int> score;
+struct library{
+    long int lib_books;
+    long int signupdays;
+    long int max_ship;
+    vector<int>book_id;
+};
+
+int main() {
+    long int p;
+    cin>>nbooks>>nlib>>days;
+    for(long int i=0;i<nbooks;i++){
+        cin>>p;
+        score.push_back(p);
+    }
+    library arr[nlib];
+    long int k;
+    for(long int i=0;i<nlib;i++){
+        cin>>arr[i].lib_books>>arr[i].signupdays>>arr[i].max_ship;
+        for(long int j=0;j<arr[i].lib_books;j++){
+            cin>>k;
+
+            arr[i].book_id.push_back(k);
+        }
+
+    }
+    
+
+    return 0;
+}
